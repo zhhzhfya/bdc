@@ -11,6 +11,7 @@ public class BdcWebApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

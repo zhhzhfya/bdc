@@ -1,26 +1,27 @@
 package com.bdc;
 
-import com.alibaba.druid.pool.DruidDataSource;
+import java.util.concurrent.CountDownLatch;
+
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import javax.sql.DataSource;
-import java.util.concurrent.CountDownLatch;
+import com.alibaba.druid.pool.DruidDataSource;
 
 /**
  * @description System Manager main Application
  * @author lishanwei
  * @date 2018年4月6日
  */
-@SpringBootApplication
+@Configuration
 @EnableAutoConfiguration
-//@ImportResource(locations = { "classpath*:dubbo-consumer.xml"})
 public class BdcMgrWebApplication {
 
  	private static final Logger logger = Logger.getLogger(BdcMgrWebApplication.class);

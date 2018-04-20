@@ -39,7 +39,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<profiles>
 		<profile>
 			<id>develop</id>
@@ -48,6 +47,7 @@
 				<profile-name>develop</profile-name>
 				<assembly-include-resources>application-develop.properties</assembly-include-resources>
 			</properties>
+			<!-- 打包默认激活 -->
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
